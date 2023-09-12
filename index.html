@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Pâtisserie Lenté</title>
+	<meta name="Author" content="Anders Söderberg">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Not changed yet">
+	<meta name="keywords" content="frontend, programmer, UI/UX, css">
+	<meta name="robots" content="index, follow">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff;">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="shortcut icon" href="media/logo.png" />
+	<link rel="stylesheet" href="https://www.anderssöderberg.se/fonts/?All">
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+	<link rel="stylesheet" href="css/nav.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script rel="script" src="scripts/nav.js"></script>
+	<script rel="script" src="scripts/index.js"></script>
+</head>
+
+<body>
+	<!-- //TODO have some coffebeans barely visible as texture/pattern in background -->
+	<!-- //TODO Go over primary & secondary colors again -->
+	<!-- //TODO snedställd coofebeans bild i navbaren -->
+	<!-- //TODO förminska bilder -->
+
+	<div id="hero">
+		<img src="media/pic 2.jpg" alt="pastery">
+		<h1 class="prevent-select">Welcome to Pâtisserie Lenté</h1>
+	</div>
+
+	<header>
+		<nav id="navbar" class="flex space-between">
+			<div id="company" class="flex center-block gap">
+				<img src="media/logo.png" alt="Pâtisserie Lenté" width="30px" height="30px" id="company_logo">
+				<h3 class="prevent-select">Pâtisserie Lenté</h3>
+			</div>
+
+			<ul class="desktop prevent-select">
+				<li class="mainlink_top ">
+					<a href="index.html" class="active">Home</a>
+				</li>
+				<li class="mainlink_top">
+					<a href="about.html">About us</a>
+				</li>
+				<li class="mainlink_top">
+					<a href="contact.html">Contact</a>
+				</li>
+			</ul>
+
+			<div class="mobile">
+				<div class="menu">
+					<ul class="prevent-select">
+						<li>
+							<a href="index.html" class="active">Home</a>
+						</li>
+						<li>
+							<a href="about.html">About us</a>
+						</li>
+						<li>
+							<a href="contact.html">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main style="margin-top: 100vh;">
+		<section id="one">
+			<img src="media/pic 1.jpg" alt="bun">
+			<h3>Bun</h3>
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti quibusdam reprehenderit, totam
+				velit,
+				alias, magnam sit adipisci ullam fugiat id excepturi vitae deserunt voluptas quam veniam quisquam
+				doloremque. Repudiandae tempora quasi rerum reprehenderit qui illo deleniti accusamus porro maxime
+				unde
+				fugiat saepe perspiciatis adipisci eaque, eos velit officiis, illum explicabo ipsa. Ab recusandae
+				beatae
+				at, aperiam, similique nobis ipsum dolorem mollitia eos ea totam perspiciatis exercitationem, ex
+				adipisci nisi cumque minus ducimus enim explicabo rerum nam harum? Iure doloremque dolor molestiae a
+				eveniet sequi, nostrum labore voluptate sapiente. Ea natus omnis inventore, ducimus eum cupiditate
+				exercitationem libero quae delectus dignissimos aliquid praesentium quod officiis, perferendis
+				dolor!
+				Facilis vero libero modi! Assumenda voluptatum expedita doloribus sapiente dolorum minima impedit
+				cupiditate tempora quidem et non laudantium necessitatibus rem, autem pariatur corporis aliquam.
+			</p>
+		</section>
+
+		<section id="two">
+			<img src="media/coffee_n_laptop.jpg" alt="coffee">
+			<h3>Coffee</h3>
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti quibusdam reprehenderit, totam
+				velit,
+				alias, magnam sit adipisci ullam fugiat id excepturi vitae deserunt voluptas quam veniam quisquam
+				doloremque. Repudiandae tempora quasi rerum reprehenderit qui illo deleniti accusamus porro maxime
+				unde
+				fugiat saepe perspiciatis adipisci eaque, eos velit officiis, illum explicabo ipsa. Ab recusandae
+				beatae
+				at, aperiam, similique nobis ipsum dolorem mollitia eos ea totam perspiciatis exercitationem, ex
+				adipisci nisi cumque minus ducimus enim explicabo rerum nam harum? Iure doloremque dolor molestiae a
+				eveniet sequi, nostrum labore voluptate sapiente. Ea natus omnis inventore, ducimus eum cupiditate
+				exercitationem libero quae delectus dignissimos aliquid praesentium quod officiis, perferendis
+				dolor!
+				Facilis vero libero modi! Assumenda voluptatum expedita doloribus sapiente dolorum minima impedit
+				cupiditate tempora quidem et non laudantium necessitatibus rem, autem pariatur corporis aliquam.
+			</p>
+		</section>
+
+		<section id="three">
+			<img src="media/chocolate_cakes.jpg" alt="pastries">
+			<h3>Pastries</h3>
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti quibusdam reprehenderit, totam
+				velit,
+				alias, magnam sit adipisci ullam fugiat id excepturi vitae deserunt voluptas quam veniam quisquam
+				doloremque. Repudiandae tempora quasi rerum reprehenderit qui illo deleniti accusamus porro maxime
+				unde
+				fugiat saepe perspiciatis adipisci eaque, eos velit officiis, illum explicabo ipsa. Ab recusandae
+				beatae
+				at, aperiam, similique nobis ipsum dolorem mollitia eos ea totam perspiciatis exercitationem, ex
+				adipisci nisi cumque minus ducimus enim explicabo rerum nam harum? Iure doloremque dolor molestiae a
+				eveniet sequi, nostrum labore voluptate sapiente. Ea natus omnis inventore, ducimus eum cupiditate
+				exercitationem libero quae delectus dignissimos aliquid praesentium quod officiis, perferendis
+				dolor!
+				Facilis vero libero modi! Assumenda voluptatum expedita doloribus sapiente dolorum minima impedit
+				cupiditate tempora quidem et non laudantium necessitatibus rem, autem pariatur corporis aliquam.
+			</p>
+		</section>
+	</main>
+
+	<footer>
+		<img src="media/coffeebeans2.jpg" alt="pattern">
+		<address>
+			33 rue de la République<br>
+			60600 Clermont<br>
+			France
+		</address>
+	</footer>
+</body>
+
+</html>
