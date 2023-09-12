@@ -11,6 +11,7 @@ nav {
 	width: 80vw;
 	height: var(--nav-height);
 	background: var(--secondary-color);
+	background: linear-gradient(178deg, var(--secondary-color) 45%, black);
 	font-size: x-large;
 	padding: var(--spacing);
 	border: var(--border);

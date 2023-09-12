@@ -49,9 +49,23 @@ body {
 
 header {
 	grid-area: header;
+	position: relative;
 	display: grid;
 	place-items: center;
 	color: white;
+}
+
+#header-patter {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 700px;
+	object-fit: cover;
+	height: 100%;
+	opacity: .2;
+	border-top-right-radius: calc(var(--nav-height) / 2);
+	border-bottom-right-radius: calc(var(--nav-height) / 2);
+	z-index: -1;
 }
 
 main {
