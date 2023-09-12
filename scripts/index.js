@@ -1,3 +1,4 @@
+const getCurrentPage = (path) => window.location.pathname.includes(path);
 const isEven = (n) => n % 2 == 0;
 const isMobile = () => { const i = [/Android/i, /webOS/i, /iPhone/i, /iPad/i, /iPod/i, /BlackBerry/i, /Windows Phone/i]; return i.some(i => navigator.userAgent.match(i)) }
 
@@ -13,6 +14,9 @@ const activateSmoothScrolling = () => {
 };
 
 //ANIMATIONS
+const fadeInSection = () => gsap.to('section', { opacity: 1, duration: 3, delay: 1.7 });
+
+
 const animateNavbarAndHeaderOnLoad = () => {
 	const navbarWidth = $('#navbar')[0].clientWidth;
 	const companyWidth = $('#company')[0].clientWidth;
@@ -22,7 +26,7 @@ const animateNavbarAndHeaderOnLoad = () => {
 	tl.from("#navbar", { yPercent: -200, duration: .7 });
 	tl.from("#company", { x: center, duration: .4 });
 	tl.from(".mainlink_top", { opacity: 0, stagger: -.04 });
-	tl.from("h1", {scale: 0, opacity:0});
+	$('h1').length && tl.from("h1", { scale: 0, opacity: 0 });
 }
 
 const scrollTriggerAnimation = (node, animation, adjustedEnd) => {
@@ -54,10 +58,12 @@ const scrollTriggerAnimation = (node, animation, adjustedEnd) => {
 	};
 };
 
-const animateSections = () => {
+const animateIndexPageSections = () => {
+	gsap.set('section', { opacity: 1 });
 	//loop only needed to alter behavior
 	$('section').toArray().forEach((section, i) => {
-		if (isEven(i)) scrollTriggerAnimation(section, { xPercent: -100 });
+		if (!section.id) console.log('id needed for one or more of animateIndexPageSections');
+		else if (isEven(i)) scrollTriggerAnimation(section, { xPercent: -100 });
 		else scrollTriggerAnimation(section, { xPercent: 100 });
 	});
 };
@@ -68,9 +74,15 @@ const animateSections = () => {
 $(() => {
 	//SMOTH SCROLL (ONLY DESKTOP)
 	!isMobile() && activateSmoothScrolling()
+
 	//ANIMATIONS
 	animateNavbarAndHeaderOnLoad()
-	animateSections();
+
+	// CONDITIONAL ANIMATIONS
+	getCurrentPage('index') && animateIndexPageSections();
+	getCurrentPage('about') && fadeInSection();
+	getCurrentPage('contact') && fadeInSection();
+
 	//NAVBAR
 	$(window).on('scroll', () => toggleNavbarOnScroll())
 	$('.mobile').on('click', (e) => toggleSubMenu(e))

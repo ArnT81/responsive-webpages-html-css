@@ -38,8 +38,8 @@ body {
 	display: grid;
 	width: 100vw;
 	min-height: 100dvh;
-	background-image: linear-gradient(90deg, black, var(--complimentary-color), black);
-	grid-template-rows: 0px auto var(--footer-height);
+	background-image: radial-gradient(white, var(--secondary-color) 70% 100%);
+	grid-template-rows: calc(var(--nav-height) + var(--spacing)) auto var(--footer-height);
 	grid-template-columns: 1fr 60% 1fr;
 	grid-template-areas:
 		"header header header"
@@ -79,6 +79,7 @@ main {
 }
 
 section {
+	opacity: 0;
 	background-color: white;
 	padding: var(--spacing);
 	padding-bottom: calc(var(--spacing)*2);
@@ -100,6 +101,10 @@ section:nth-child(odd) img {
 section:nth-child(even) img {
 	float: right;
 	margin-left: var(--spacing);
+}
+
+p {
+	margin-bottom: var(--spacing);
 }
 
 h1 {
@@ -124,6 +129,7 @@ h1 {
 	height: 100%;
 	object-fit: cover;
 	z-index: -1;
+	border-bottom: 3px solid var(--primary-color);
 }
 
 footer {
@@ -144,6 +150,11 @@ footer img {
 	opacity: .1;
 }
 
+iframe {
+	width: 100%;
+	height: 450px;
+}
+
 .prevent-select {
 	-webkit-user-select: none;
 	-ms-user-select: none;
@@ -151,6 +162,10 @@ footer img {
 }
 
 .flex {
+	display: flex;
+}
+
+.conditional-flex {
 	display: flex;
 }
 
@@ -164,6 +179,12 @@ footer img {
 
 .space-between {
 	justify-content: space-between;
+}
+
+@media only screen and (max-width: 1150px) {
+	h1 {
+		font-size: 2.7rem;
+	}
 }
 
 
@@ -183,4 +204,10 @@ footer img {
 		width: 100%;
 		margin-bottom: var(--spacing);
 	}
+
+	.conditional-flex {
+		flex-direction: column;
+	}
+
+
 }
