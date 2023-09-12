@@ -11,9 +11,11 @@
 ::-webkit-scrollbar {
 	width: 1px;
 }
+
 ::-webkit-scrollbar-track {
 	background: black;
 }
+
 ::-webkit-scrollbar-thumb {
 	background: var(--complimentary-color);
 }
@@ -35,7 +37,6 @@
 body {
 	display: grid;
 	width: 100vw;
-	/* overflow-x: hidden; */
 	min-height: 100dvh;
 	background-image: linear-gradient(90deg, black, var(--complimentary-color), black);
 	grid-template-rows: 0px auto var(--footer-height);
@@ -60,6 +61,7 @@ main {
 	grid-area: main;
 	padding: var(--spacing);
 	margin-bottom: 100px;
+	overflow-x: hidden;
 }
 
 section {
@@ -69,11 +71,10 @@ section {
 	border-radius: 8px;
 	border: var(--border);
 	margin-bottom: var(--spacing);
-	box-shadow: 10px 10px 30px black;
+	box-shadow: 7px 8px 8px black;
 }
 
 section img {
-	/* height: 300px; */
 	width: 50%;
 }
 
@@ -160,13 +161,12 @@ footer img {
 			"footer footer footer";
 	}
 
-	h1{
+	h1 {
 		font-size: unset;
 	}
 
-		section img {
-			/* height: 300px; */
-			width: 100%;
-			margin-bottom: var(--spacing);
-		}
+	section img {
+		width: 100%;
+		margin-bottom: var(--spacing);
+	}
 }
