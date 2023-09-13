@@ -207,6 +207,11 @@ iframe {
 		font-size: unset;
 	}
 
+	main {
+		background: unset;
+		border: unset;
+	}
+
 	section img {
 		width: 100%;
 		margin-bottom: var(--spacing);
@@ -215,6 +220,4 @@ iframe {
 	.conditional-flex {
 		flex-direction: column;
 	}
-
-
 }
