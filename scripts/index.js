@@ -1,4 +1,4 @@
-const getCurrentPage = (path) => window.location.pathname.includes(path);
+const getCurrentPage = () => window.location.pathname;
 const isEven = (n) => n % 2 == 0;
 const isMobile = () => { const i = [/Android/i, /webOS/i, /iPhone/i, /iPad/i, /iPod/i, /BlackBerry/i, /Windows Phone/i]; return i.some(i => navigator.userAgent.match(i)) }
 
@@ -14,7 +14,7 @@ const activateSmoothScrolling = () => {
 };
 
 //ANIMATIONS
-const fadeInSection = () => gsap.to('section', { opacity: 1, duration: 3, delay: 1.7 });
+const fadeInSection = () => gsap.to('section', { opacity: 1, duration: 3, delay: 1.5 });
 
 
 const animateNavbarAndHeaderOnLoad = () => {
@@ -79,9 +79,7 @@ $(() => {
 	animateNavbarAndHeaderOnLoad()
 
 	// CONDITIONAL ANIMATIONS
-	getCurrentPage('index') && animateIndexPageSections();
-	getCurrentPage('about') && fadeInSection();
-	getCurrentPage('contact') && fadeInSection();
+	getCurrentPage().includes('index') || getCurrentPage() === '/' ? animateIndexPageSections() : fadeInSection();
 
 	//NAVBAR
 	$(window).on('scroll', () => toggleNavbarOnScroll())
