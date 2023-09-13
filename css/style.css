@@ -37,7 +37,10 @@ body {
 	display: grid;
 	width: 100vw;
 	min-height: 100dvh;
-	background-image: radial-gradient(white, var(--secondary-color) 70% 100%);
+	background-color: var(--primary-color);
+	background-image: url("../media/body_pattern.jpg");
+	background-size: cover;
+	background-blend-mode: multiply;
 	grid-template-rows: calc(var(--nav-height) + var(--spacing)) auto var(--footer-height);
 	grid-template-columns: 1fr 60% 1fr;
 	grid-template-areas:
