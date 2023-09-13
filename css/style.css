@@ -33,7 +33,6 @@
 	background: var(--complimentary-color);
 }
 
-/* //TODO moving image (can´t remmember what its called) */
 body {
 	display: grid;
 	width: 100vw;
@@ -59,7 +58,7 @@ header {
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 700px;
+	width: 60%;
 	object-fit: cover;
 	height: 100%;
 	opacity: .2;
@@ -120,7 +119,7 @@ h1 {
 	display: grid;
 	place-items: center;
 	width: 100vw;
-	height: 80vh;
+	height: 100vh;
 }
 
 #hero img {
