@@ -5,7 +5,8 @@
 	--secondary-color: #5C2605;
 	--complimentary-color: #F56E1B;
 	--spacing: 16px;
-	--border: 3px solid var(--primary-color)
+	--border: 3px solid var(--primary-color);
+	--border-radius: 8px;
 }
 
 ::-webkit-scrollbar {
@@ -41,7 +42,7 @@ body {
 	background-image: url("../media/body_pattern.jpg");
 	background-size: cover;
 	background-blend-mode: multiply;
-	grid-template-rows: calc(var(--nav-height) + var(--spacing)) auto var(--footer-height);
+	grid-template-rows: calc(var(--nav-height) + var(--spacing)*3) auto var(--footer-height);
 	grid-template-columns: 1fr 60% 1fr;
 	grid-template-areas:
 		"header header header"
@@ -71,13 +72,17 @@ header {
 }
 
 main {
+	grid-area: main;
 	display: flex;
 	flex-direction: column;
 	gap: var(--spacing);
-	grid-area: main;
+	height: fit-content;
+	background: linear-gradient(135deg, var(--secondary-color) 45%, black);
 	padding: var(--spacing);
 	margin-bottom: 100px;
 	overflow-x: hidden;
+	border: 2px ridge var(--complimentary-color);
+	border-radius: var(--border-radius);
 }
 
 section {
@@ -85,7 +90,7 @@ section {
 	background-color: white;
 	padding: var(--spacing);
 	padding-bottom: calc(var(--spacing)*2);
-	border-radius: 8px;
+	border-radius: var(--border-radius);
 	border: var(--border);
 	margin-bottom: var(--spacing);
 	box-shadow: 7px 8px 8px black;
