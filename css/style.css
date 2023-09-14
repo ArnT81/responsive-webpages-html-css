@@ -48,6 +48,7 @@ body {
 		"header header header"
 		". main ."
 		"footer footer footer";
+	overflow-x: hidden;
 }
 
 header {
